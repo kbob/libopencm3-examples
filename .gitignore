@@ -10,4 +10,5 @@
 *.stylecheck
 nbproject
 .gdb_history
+.gdbinit
 .DS_Store
