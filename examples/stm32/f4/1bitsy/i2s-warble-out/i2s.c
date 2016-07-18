@@ -72,5 +72,5 @@ extern void init_i2s(const i2s_config *cfg, const i2s_instance *inst)
     }
 }
 
-void reset_i2s(const i2s_instance *inst)
-{}
+// void reset_i2s(const i2s_instance *inst)
+// {}

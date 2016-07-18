@@ -32,12 +32,11 @@ Implement:
  - Build on JIGMOD.
    + 1BitSy
    + audio adapter
+   + knob + button board
  - millisecond timer
  - serial out
-   + UART or USB?
  - button bounce
  - analog read
  - I2C
  - I2C to SGTL5000
  - I2S (the big one)
- 

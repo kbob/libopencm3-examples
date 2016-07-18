@@ -19,8 +19,8 @@
 
 BINARY := i2s-warble
 
-SOURCES := console.c gpio.c i2s.c
-OBJS := $(SOURCES:.c=.o)
+SOURCES := console.c debounce.c gpio.c i2s.c systick.c
+OBJS := $(patsubst %.cpp, %.o, $(SOURCES:.c=.o))
 
 LDSCRIPT := ../stm32f4-1bitsy.ld
 
