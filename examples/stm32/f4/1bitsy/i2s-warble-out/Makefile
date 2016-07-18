@@ -26,5 +26,6 @@ LDSCRIPT := ../stm32f4-1bitsy.ld
 
 include ../../Makefile.include
 
+.PHONY: tags
 tags:
 	make-etags-SimplicityStudio `strings -a "$(LIB_DIR)/libopencm3_stm32f4.a" | grep '\.\./.*\.c' | sed 's,^\([^/]\),../../../../../libopencm3/lib/stm32/f4/\1,'`

@@ -178,16 +178,20 @@ int main(void)
 
         printf("Hello, World!\n");
 
-        uint32_t next = 5000;
+        uint32_t next = 500;
         while (true) {
             uint32_t now = system_millis;
             if (now == next) {
-                gpio_toggle(GPIOA, GPIO8);
                 gpio_toggle(GPIOB, GPIO0);
                 next += 500;
             }
+            if (debounce_update(&button)) {
+                if (debounce_is_falling_edge(&button))
+                    gpio_clear(GPIOA, GPIO8);
+                if (debounce_is_rising_edge(&button))
+                    gpio_set(GPIOA, GPIO8);
+            }
         }
-        
 
 	return 0;
 }
